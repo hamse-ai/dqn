@@ -4,6 +4,7 @@ import gymnasium as gym
 import ale_py
 import torch
 from torch import nn
+from replay_buffer import ReplayBuffer
 
 # Gymnasium 1.x requires ALE's environments to be registered explicitly.
 gym.register_envs(ale_py)
@@ -38,8 +39,8 @@ class QNetwork(nn.Module):
         return self.value(self.features(state))
 
 
-def initialize() -> tuple[gym.Env, QNetwork, QNetwork, torch.device]:
-    """Create the preprocessed Air Raid environment and the two DQN networks."""
+def initialize() -> tuple[gym.Env, QNetwork, QNetwork, ReplayBuffer, torch.device]:
+    """Create Air Raid, the DQN networks, and an empty replay buffer."""
     # rgb_array lets Gymnasium capture frames without opening a game window.
     env = gym.make("ALE/AirRaid-v5", frameskip=1, render_mode="rgb_array")
     env = gym.wrappers.AtariPreprocessing(
@@ -70,13 +71,16 @@ def initialize() -> tuple[gym.Env, QNetwork, QNetwork, torch.device]:
     target_network.load_state_dict(online_network.state_dict())
     target_network.eval()
 
-    return env, online_network, target_network, device
+    replay_buffer = ReplayBuffer(capacity=10_000)
+
+    return env, online_network, target_network, replay_buffer, device
 
 
 if __name__ == "__main__":
-    env, online_network, target_network, device = initialize()
+    env, online_network, target_network, replay_buffer, device = initialize()
     print(f"Observation shape: {env.observation_space.shape}")
     print(f"Number of actions: {env.action_space.n}")
     print(f"Online network device: {device}")
+    print(f"Replay buffer capacity: {replay_buffer.capacity}")
     print(f"Q-values shape: {online_network(torch.zeros(1, 4, 84, 84, device=device)).shape}")
     env.close()
