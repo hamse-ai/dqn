@@ -1,0 +1,19 @@
+[project]
+name = "air-raid-dqn"
+version = "0.1.0"
+description = "A from-scratch DQN agent for Atari Air Raid"
+requires-python = ">=3.13"
+dependencies = [
+    "gymnasium[atari,other]",
+    "moviepy",
+    "torch",
+]
+
+# Use PyTorch's CPU-only wheels to avoid CUDA and NVIDIA package downloads.
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
