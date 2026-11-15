@@ -1,7 +1,7 @@
 #!/bin/bash
 # Runs Amaliza's 10 experiments. Finished runs are skipped, so you can stop and re-run safely.
 set -e
-run() { [ -f "Amaliza/exp$(printf %02d $1)/summary.json" ] || uv run python train.py --member Amaliza --exp "$@"; }
+run() { [ -f "Amaliza/exp$(printf %02d $1)/summary.json" ] || uv run python src/train.py --member Amaliza --exp "$@"; }
 
 run 1  --lr 0.0001
 run 2  --lr 0.001

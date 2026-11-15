@@ -1,7 +1,7 @@
 """Train a DQN agent to play Atari Air Raid.
 
 Example:
-    uv run python train.py --member Amaliza --exp 1 --lr 0.00025
+    uv run python src/train.py --member Amaliza --exp 1 --lr 0.00025
 """
 
 import argparse
@@ -16,7 +16,7 @@ import ale_py
 import gymnasium as gym
 import matplotlib
 
-matplotlib.use("Agg")  # no display is needed (works on Colab and servers)
+matplotlib.use("Agg")  
 import matplotlib.pyplot as plt
 import numpy as np
 import torch

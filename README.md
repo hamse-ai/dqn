@@ -45,7 +45,7 @@ The project uses two networks with this same architecture:
 5. Smooth L1 loss compares the target with the online network's Q-value for the action taken. Adam updates the online network.
 6. Training records episode reward, episode length, total environment steps, and epsilon. The checkpoint with the best rolling average over 20 episodes is saved for each experiment.
 
-The network, replay buffer, and training logic are implemented in [`train.py`](train.py) and [`replay_buffer.py`](replay_buffer.py). Experiment configurations and results are documented in [Hamse's report](Hamse_Hyperparameter_experiment_results.md), [Amaliza's report](Amaliza_Hyperparameter_experiment_results.md), and [Prince's report](Prince_Hyperparameter_experiment_results.md).
+The network, replay buffer, and training logic are implemented in [`src/train.py`](src/train.py) and [`src/replay_buffer.py`](src/replay_buffer.py). Experiment configurations and results are documented in [Hamse's report](docs/Hamse_Hyperparameter_experiment_results.md), [Amaliza's report](docs/Amaliza_Hyperparameter_experiment_results.md), and [Prince's report](docs/Prince_Hyperparameter_experiment_results.md).
 
 ## Running the project
 
@@ -55,10 +55,10 @@ Install dependencies with `uv`:
 uv sync
 ```
 
-Run an experiment by specifying the member and experiment number:
+Run commands from the repository root. Specify the member and experiment number:
 
 ```bash
-uv run python train.py --member Hamse --exp 1
+uv run python src/train.py --member Hamse --exp 1
 ```
 
 The default training budget is 300,000 environment steps. A saved model, metrics, summary, and plot are written to the corresponding member's experiment folder.
@@ -66,7 +66,7 @@ The default training budget is 300,000 environment steps. A saved model, metrics
 To watch a saved model play in a window, pass its checkpoint path to `play.py`:
 
 ```bash
-uv run python play.py Hamse/exp01/dqn_model.pth
+uv run python src/play.py Hamse/exp01/dqn_model.pth
 ```
 
 The project currently selects the CPU-only PyTorch package in `pyproject.toml`. Using a Kaggle GPU requires a CUDA-enabled PyTorch build in that environment.

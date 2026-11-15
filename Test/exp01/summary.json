@@ -1,0 +1,22 @@
+{
+  "config": {
+    "member": "Test",
+    "exp": 1,
+    "output_dir": null,
+    "total_steps": 20000,
+    "seed": 0,
+    "lr": 0.0001,
+    "gamma": 0.99,
+    "batch_size": 32,
+    "eps_start": 1.0,
+    "eps_end": 0.05,
+    "eps_decay": 100000
+  },
+  "best_avg_reward": 668.75,
+  "last_avg_reward": 630.0,
+  "best_episode_reward": 1575.0,
+  "best_episode_length": 1352,
+  "best_episode_total_steps": 17422,
+  "episodes": 33,
+  "minutes": 2.5
+}

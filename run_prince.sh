@@ -10,7 +10,7 @@ run() {
     if [ -f "$folder/summary.json" ]; then
         echo "$folder already done, skipping"
     else
-        uv run python train.py --member Prince --exp "$@"
+        uv run python src/train.py --member Prince --exp "$@"
     fi
 }
 
