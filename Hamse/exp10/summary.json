@@ -1,0 +1,22 @@
+{
+  "config": {
+    "member": "Hamse",
+    "exp": 10,
+    "output_dir": null,
+    "total_steps": 300000,
+    "seed": 0,
+    "lr": 0.0001,
+    "gamma": 0.99,
+    "batch_size": 32,
+    "eps_start": 1.0,
+    "eps_end": 0.02,
+    "eps_decay": 50000
+  },
+  "best_avg_reward": 1580.0,
+  "last_avg_reward": 1220.0,
+  "best_episode_reward": 2850.0,
+  "best_episode_length": 2112,
+  "best_episode_total_steps": 225454,
+  "episodes": 548,
+  "minutes": 55.4
+}
