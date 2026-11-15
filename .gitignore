@@ -2,5 +2,5 @@
 __pycache__/
 *.py[cod]
 videos/
-dqn_model*.pth
 *.mp4
+prince_log.txt

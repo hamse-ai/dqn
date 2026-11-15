@@ -1,0 +1,22 @@
+{
+  "config": {
+    "member": "Prince",
+    "exp": 3,
+    "output_dir": null,
+    "total_steps": 300000,
+    "seed": 0,
+    "lr": 0.0001,
+    "gamma": 0.97,
+    "batch_size": 32,
+    "eps_start": 1.0,
+    "eps_end": 0.05,
+    "eps_decay": 100000
+  },
+  "best_avg_reward": 885.0,
+  "last_avg_reward": 707.5,
+  "best_episode_reward": 2425.0,
+  "best_episode_length": 2126,
+  "best_episode_total_steps": 11449,
+  "episodes": 618,
+  "minutes": 356.3
+}
