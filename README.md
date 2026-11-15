@@ -114,10 +114,10 @@ The video below shows the greedy DQN policy using the checkpoint with the highes
 
 [Open or download the gameplay video](videos/best_agent-episode-0.mp4).
 
-For the live demonstration, we run `play.py` with the same checkpoint. It plays greedily (always choosing the action with the highest Q-value) and shows the game in a window:
+For the live demonstration, we run `play.py` with the same checkpoint. It plays greedily (always choosing the action with the highest Q-value) and shows the game in a window. The `dqn_model.pth` in the repository root is a copy of this checkpoint, so `play.py` uses it by default:
 
 ```bash
-uv run python src/play.py Hamse/exp01/dqn_model.pth
+uv run python src/play.py
 ```
 
 ## 7. Task allocation
