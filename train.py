@@ -103,7 +103,13 @@ def initialize(config):
     env.action_space.seed(config.seed)
 
     num_actions = env.action_space.n
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # Use an NVIDIA GPU (e.g. Colab), else the Apple GPU (Mac), else the CPU.
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
 
     online_network = QNetwork(input_channels=4, num_actions=num_actions).to(device)
     target_network = QNetwork(input_channels=4, num_actions=num_actions).to(device)

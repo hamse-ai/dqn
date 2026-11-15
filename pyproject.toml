@@ -5,6 +5,7 @@ description = "A from-scratch DQN agent for Atari Air Raid"
 requires-python = ">=3.13"
 dependencies = [
     "gymnasium[atari,other]",
+    "matplotlib>=3.11.2",
     "moviepy",
     "torch",
 ]
