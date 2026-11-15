@@ -3,4 +3,6 @@ __pycache__/
 *.py[cod]
 videos/
 *.mp4
+!videos/
+!videos/best_agent-episode-0.mp4
 prince_log.txt
