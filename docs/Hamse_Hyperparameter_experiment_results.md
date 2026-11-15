@@ -81,13 +81,13 @@ The model, metrics, plot, and summary for each run are in `Hamse/expXX/`:
 
 | Exp | Run artifacts |
 |-----|---------------|
-| 1 | [summary](Hamse/exp01/summary.json), [metrics](Hamse/exp01/metrics.csv), [plot](Hamse/exp01/plot.png) |
-| 2 | [summary](Hamse/exp02/summary.json), [metrics](Hamse/exp02/metrics.csv), [plot](Hamse/exp02/plot.png) |
-| 3 | [summary](Hamse/exp03/summary.json), [metrics](Hamse/exp03/metrics.csv), [plot](Hamse/exp03/plot.png) |
-| 4 | [summary](Hamse/exp04/summary.json), [metrics](Hamse/exp04/metrics.csv), [plot](Hamse/exp04/plot.png) |
-| 5 | [summary](Hamse/exp05/summary.json), [metrics](Hamse/exp05/metrics.csv), [plot](Hamse/exp05/plot.png) |
-| 6 | [summary](Hamse/exp06/summary.json), [metrics](Hamse/exp06/metrics.csv), [plot](Hamse/exp06/plot.png) |
-| 7 | [summary](Hamse/exp07/summary.json), [metrics](Hamse/exp07/metrics.csv), [plot](Hamse/exp07/plot.png) |
-| 8 | [summary](Hamse/exp08/summary.json), [metrics](Hamse/exp08/metrics.csv), [plot](Hamse/exp08/plot.png) |
-| 9 | [summary](Hamse/exp09/summary.json), [metrics](Hamse/exp09/metrics.csv), [plot](Hamse/exp09/plot.png) |
-| 10 | [summary](Hamse/exp10/summary.json), [metrics](Hamse/exp10/metrics.csv), [plot](Hamse/exp10/plot.png) |
+| 1 | [summary](../Hamse/exp01/summary.json), [metrics](../Hamse/exp01/metrics.csv), [plot](../Hamse/exp01/plot.png) |
+| 2 | [summary](../Hamse/exp02/summary.json), [metrics](../Hamse/exp02/metrics.csv), [plot](../Hamse/exp02/plot.png) |
+| 3 | [summary](../Hamse/exp03/summary.json), [metrics](../Hamse/exp03/metrics.csv), [plot](../Hamse/exp03/plot.png) |
+| 4 | [summary](../Hamse/exp04/summary.json), [metrics](../Hamse/exp04/metrics.csv), [plot](../Hamse/exp04/plot.png) |
+| 5 | [summary](../Hamse/exp05/summary.json), [metrics](../Hamse/exp05/metrics.csv), [plot](../Hamse/exp05/plot.png) |
+| 6 | [summary](../Hamse/exp06/summary.json), [metrics](../Hamse/exp06/metrics.csv), [plot](../Hamse/exp06/plot.png) |
+| 7 | [summary](../Hamse/exp07/summary.json), [metrics](../Hamse/exp07/metrics.csv), [plot](../Hamse/exp07/plot.png) |
+| 8 | [summary](../Hamse/exp08/summary.json), [metrics](../Hamse/exp08/metrics.csv), [plot](../Hamse/exp08/plot.png) |
+| 9 | [summary](../Hamse/exp09/summary.json), [metrics](../Hamse/exp09/metrics.csv), [plot](../Hamse/exp09/plot.png) |
+| 10 | [summary](../Hamse/exp10/summary.json), [metrics](../Hamse/exp10/metrics.csv), [plot](../Hamse/exp10/plot.png) |
