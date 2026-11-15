@@ -1,0 +1,22 @@
+{
+  "config": {
+    "member": "Amaliza",
+    "exp": 3,
+    "output_dir": null,
+    "total_steps": 300000,
+    "seed": 0,
+    "lr": 0.0005,
+    "gamma": 0.99,
+    "batch_size": 32,
+    "eps_start": 1.0,
+    "eps_end": 0.05,
+    "eps_decay": 100000
+  },
+  "best_avg_reward": 772.5,
+  "last_avg_reward": 326.25,
+  "best_episode_reward": 2150.0,
+  "best_episode_length": 1733,
+  "best_episode_total_steps": 15734,
+  "episodes": 754,
+  "minutes": 12.1
+}
