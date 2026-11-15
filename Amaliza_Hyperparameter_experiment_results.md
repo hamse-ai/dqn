@@ -8,6 +8,8 @@
 
 I ran 10 experiments, each with a different combination of hyperparameters, using our group's `train.py`. I defined all 10 runs in `run_amaliza.sh`, so anyone can repeat them with one command. My models, metrics and plots are in `Amaliza/expXX/` (`dqn_model.pth`, `metrics.csv`, `plot.png`, `summary.json`).
 
+**My part in the group:** my focus was the **learning rate** (Exp 1–6 test six learning rates from 0.001 down to 0.00001). In Exp 7–10 I took the most interesting learning rates and changed one other setting each (batch size, epsilon decay, gamma, epsilon end) to see how they interact with the learning rate. Hamse's experiments go deeper into the epsilon schedule and Prince's into gamma and batch size, so together our group covers all six hyperparameters.
+
 I kept these settings the same in every run, so that only the six hyperparameters I was testing changed the result:
 
 | Fixed setting | Value |
@@ -88,6 +90,23 @@ I say an agent **learned** if its scores at the end are clearly above random pla
 | Gamma | Exp 3 (0.99) vs Exp 9 (0.95) | End avg 326 -> **171** | Hurt | A shorter-sighted agent values survival less, and surviving longer is what earns points in Air Raid. |
 
 **Episode length followed the reward:** in the runs that learned (1, 5, 7, 8, 10), episodes got longer because the agent survived longer. In the runs that failed (2, 3, 6, 9), episodes got shorter.
+
+## Training performance of my best experiment (Exp 8)
+
+| Part of training | Episodes | Average episode length (steps) | Average reward | Highest reward |
+|------------------|----------|--------------------------------|----------------|----------------|
+| Steps 0–100k | 231 | 433 | 458 | 2,125 |
+| Steps 100k–200k | 192 | 519 | 540 | 2,125 |
+| Steps 200k–300k | 128 | 787 | 904 | 4,350 |
+| **Whole run** | **551** | **545** (shortest 124, longest 2,873) | **590** | **4,350** |
+
+In total I trained for 300,367 environment steps (about 12.6 minutes on the GPU). In the last third of training the agent survived about 80% longer per episode and scored about twice as much as in the first third. My best single game (4,350 points, 2,873 steps long) came at step 252,935.
+
+![Training plot of Exp 8 (best): reward, episode length and epsilon](Amaliza/exp08/plot.png)
+
+For comparison, my worst run (Exp 9) went the other way: its scores and episode lengths shrank as epsilon dropped.
+
+![Training plot of Exp 9 (worst): reward, episode length and epsilon](Amaliza/exp09/plot.png)
 
 ## My final configuration and why I chose it
 
