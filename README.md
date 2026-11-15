@@ -126,6 +126,6 @@ uv run python src/play.py
 |--------|---------------|
 | Hamse | Set up the uv project; built the Q-network and target network, the first replay buffer and the training loop (`src/train.py`); organised the repository; wrote the README and recorded the gameplay video; ran 10 experiments on the epsilon schedule |
 | Amaliza | Reworked the replay buffer into a fixed-size list that overwrites the oldest experiences; wrote `run_amaliza.sh`; ran 10 experiments on the learning rate; analysed the results |
-| Prince | Pinned Python 3.13 so that `ale-py` and `torch` install correctly; wrote `src/play.py`; added Apple GPU (MPS) support to training; ran 10 experiments on gamma and batch size |
+| Prince | Group leader; pinned Python 3.13 so that `ale-py` and `torch` install correctly; wrote `src/play.py` for evaluation; added Apple GPU (MPS) support to training; ran 10 experiments on gamma and batch size |
 
-The same allocation is in [`Task allocation sheet.pdf`](Task%20allocation%20sheet.pdf).
+Our completed team task sheet, with each member's role, the task tracker and our meeting log, is in [`Task allocation sheet.pdf`](Task%20allocation%20sheet.pdf).
